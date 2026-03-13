@@ -38,7 +38,11 @@ services:
       interval: 10s
       timeout: 3s
       retries: 10
-
+    networks:
+      - grok2api
+      - warp
+      - apinetwork
+      
   pgsql:
     profiles: ["pgsql"]
     container_name: grok2api-pgsql
@@ -55,7 +59,9 @@ services:
       interval: 10s
       timeout: 5s
       retries: 10
-
+    networks:
+      - grok2api
+      
   mysql:
     profiles: ["mysql"]
     container_name: grok2api-mysql
@@ -73,7 +79,17 @@ services:
       interval: 10s
       timeout: 5s
       retries: 10
+    networks:
+      - grok2api
 
+networks:
+  grok2api:
+    name: grok2api
+  warp:
+    name: warp
+  apinetwork:
+    name: apinetwork
+    
 volumes:
   redis-data:
   pgsql-data:
