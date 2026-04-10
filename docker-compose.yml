@@ -41,5 +41,5 @@ networks:
     name: apinetwork
 
 # VPS 需使用 volumes
-# volumes:
-#  grok2api_postgres_data:
+ volumes:
+  grok2api_postgres_data:
