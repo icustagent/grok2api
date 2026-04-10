@@ -38,3 +38,6 @@ networks:
     name: grok2api
   apinetwork:
     name: apinetwork
+
+# volumes:
+#  grok2api_postgres_data:
