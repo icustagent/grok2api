@@ -19,8 +19,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "1.00"
-          memory: 1G
+          cpus: "2.00"
+          memory: 2G
 
   postgres:
     container_name: grok2api-postgres
@@ -41,8 +41,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.50"
-          memory: 512M
+          cpus: "2.00"
+          memory: 2G
           
 networks:
   grok2api:
